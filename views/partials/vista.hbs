@@ -1,0 +1,33 @@
+<style>
+    .table td, .table th {
+        vertical-align: middle;
+    }
+    h1 {
+        color: blue;
+    }
+    hr {
+        background-color: #ddd;
+    }
+    .jumbotron {
+        min-height: 10vh;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>Lista de Productos</h1>
+    <br>
+<div class="table-responsive">
+    <table id='myTable' class="table table-dark">
+{{#if productos.length}}
+<tr>  <th>Nombre</th> <th>Precio</th> <th>Foto</th></tr>
+  {{#each productos}}
+  <tr><td>{{this.nombre}}</td><td>{{this.precio}}</td> <td> <img src= {{this.url}} width="50" height="50"></td></tr>
+  {{/each}}
+
+{{else}}
+    <tr>  <th>Nombre</th> <th>Precio</th> <th>Foto</th></tr>
+    
+{{/if}}
+    </table>
+</div>    
+</div>

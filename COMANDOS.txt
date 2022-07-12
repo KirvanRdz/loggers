@@ -1,0 +1,35 @@
+node dist/main.js --port=8080 --modo=FORK
+node dist/main.js --port=8080 --modo=CLUSTER
+node dist/main.js --port=8080
+http://localhost:8080/info
+----------------------------------------------------
+forever start  dist/main.js --port=8080
+forever list
+forever stop
+-------------------------------------------------------
+pm2 start  dist/main.js
+pm2 list
+pm2 stop main 
+pm2 start  dist/main.js --name="cluster" --watch -i max
+pm2 stop cluster
+-------------------------------------------------------
+para NGINX : (usar nginx.conf)
+
+pm2 start ecosystem.config.js
+./nginx.exe
+http://localhost:8081/
+http://localhost:8080/
+http://localhost
+http://localhost/api/randoms
+
+pm2 stop app1    
+pm2 stop app2 
+./nginx.exe -s stop   
+-----------------------------------------------
+Ahora usar para NGINX : (usar nginx2.conf)
+pm2 start ecosystem2.config.js
+./nginx.exe
+http://localhost
+http://localhost/api/randoms
+pm2 stop app1 app2 app3 app4 app5         
+./nginx.exe -s stop 

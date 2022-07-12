@@ -1,0 +1,33 @@
+
+{{#if process1.length}}
+  {{#each process1}}
+    <div >       
+        <h3>Argumentos de entrada:</h3>
+        <p>{{this.argumentos}}</p>    
+        <br>
+        <h3>Sistema Operativo:</h3>
+        <p>{{this.so}}</p>      
+        <h3>Version de node.js:</h3>
+        <p>{{this.vnode}}</p>    
+        <br>
+        <h3>Memoria total reservada(rss):</h3>
+        <p>{{this.rss}}</p>       
+        <h3>Path de ejecución:</h3>
+        <p>{{this.path}}</p>    
+        <br>
+        <h3>Process id:</h3>
+        <p>{{this.id}}</p>            
+        <h3>Carpeta del proyecto:</h3>
+        <p>{{this.carpeta}}</p>  
+        <h3>Numero de Preocesadores:</h3>
+        <p>{{this.noPro}}</p>    
+        
+    </div>
+  {{/each}}
+
+{{else}}
+    <div class="chat-messages">       
+        <h1>SIN DATOS</h1>   
+    </div>
+    
+{{/if}}

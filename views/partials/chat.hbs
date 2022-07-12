@@ -1,0 +1,83 @@
+<style>
+    .table td, .table th {
+        vertical-align: middle;
+    }
+    h1 {
+        color: blue;
+    }
+    hr {
+        background-color: #ddd;
+    }
+    .jumbotron {
+        min-height: 10vh;
+    }
+
+    .boton{
+        background-color: cornflowerblue;
+        border: none;
+        color: white;
+        
+    }
+
+    strong{
+        color: blue;
+    }
+    em{
+        color: maroon;
+    }
+
+    p{
+        color: green;
+    }
+    .chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: scroll;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>Centro de Mensajes</h1>
+    <br>
+    <form id='formMensajes'>
+        <div class='form-group'>
+            <label for='email'>Email</label>
+            <input class='form-control' type='email' name='email' id='email' required>
+        </div>
+        <div class='form-group'>
+            <label for='nombre'>Nombre</label>
+            <input class='form-control' type='text' name='nombreChat' id='nombreChat' required>
+        </div>
+        <div class='form-group'>
+            <label for='apellido'>Apellido</label>
+            <input class='form-control' type='text' name='apellido' id='apellido' required>
+        </div>
+        <div class='form-group'>
+            <label for='alias'>Alias</label>
+            <input class='form-control' type='text' name='alias' id='alias' required>
+        </div>
+        <div class='form-group'>
+            <label for='edad'>Edad</label>
+            <input class='form-control' type='number' name='edad' id='edad' required>
+        </div>
+        <div class='form-group'>
+            <label for='avatar'>Avatar</label>
+            <input class='form-control' type='text' name='avatar' id='avatar' required>
+        </div>
+     </form>
+      <hr>
+    <div class="chat-messages">       
+        <div class="message"></div>               
+    </div>
+    <br>
+    <form id="chat-form">
+        <input id="mensaje" type="text" placeholder="Ingresa un mensaje..." required autocomplete="off" />
+        <button class="boton" id='SubmitChat'> Enviar</button>
+  
+    </form>
+
+</div>
+    
+    
+     
+   

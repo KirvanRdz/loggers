@@ -1,0 +1,53 @@
+{
+  "name": "02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/main.js",
+    "dev": "nodemon --exec babel-node ./src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.18.3",
+    "bcrypt": "^5.0.1",
+    "child_process": "^1.0.2",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.3",
+    "forever": "^4.0.3",
+    "knex": "^2.0.0",
+    "minimist": "^1.2.6",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.5",
+    "mysql": "^2.18.1",
+    "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pm2": "^5.2.0",
+    "redis": "^4.1.0",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^5.0.8",
+    "util": "^0.12.4",
+    "uuid": "^8.3.2",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@faker-js/faker": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}

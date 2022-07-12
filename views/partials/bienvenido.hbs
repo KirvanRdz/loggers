@@ -1,0 +1,24 @@
+<style>
+.contenedor {
+  width: 100%;
+  display: flex;
+  background-color: rgb(91, 163, 73);
+
+  
+}
+</style>
+<div class="contenedor">
+  {{#if info.length}}
+
+  {{#each info}}
+  <h1 style="color: white">Bienvenido {{this.nombre}}</h1>
+  {{/each}}
+
+{{else}}
+    <h1 style="color: white">Bienvenidos</h1>
+    
+{{/if}}
+  
+ <div style="display:flex; justify-content:flex-end; width:60%; padding: 10px;"> <input type="button" value="Desloguearse" onclick="location.href='/logout'"/> </div>
+</div>
+
